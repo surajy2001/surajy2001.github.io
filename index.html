@@ -1,1 +1,58 @@
 # form
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Contact Request Form</h1>
+      <p class="subtitle">Submit your information and I’ll follow up with you.</p>
+
+      <form>
+        <label>
+          Full Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email Address
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Phone Number
+          <input type="tel" name="phone" required />
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="sms_consent" required />
+          <span>
+            I agree to receive text messages from Suraj Yerramilli related to my request.
+            Message and data rates may apply. Message frequency may vary.
+            Reply STOP to unsubscribe and HELP for help. Consent is not a condition of purchase.
+          </span>
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <footer>
+        <a href="privacy.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="terms.html">Terms & Conditions</a>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
