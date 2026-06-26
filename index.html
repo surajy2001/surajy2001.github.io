@@ -3,74 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Form - Talk to me (Suraj Y)</title>
+  <title>Summit Air & Home Services</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
-<script
-  src="https://lead-intake-api-u57w.onrender.com/widget.js"
-  data-client-id="abc-plumbing"
-  data-api-base="https://lead-intake-api-u57w.onrender.com"
-  async>
-</script>
-
-  
 <body>
-  <main class="container">
-    <section class="card">
-      <h1>Contact Request Form</h1>
-      <p class="subtitle">Submit your information and I’ll follow up with you.</p>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Summit Air & Home Services home">
+      <span class="brand-mark">SA</span>
+      <span>
+        <strong>Summit Air</strong>
+        <small>& Home Services</small>
+      </span>
+    </a>
 
-      <form>
-        <label>
-          First Name
-          <input type="text" name="first_name" required />
-        </label>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#area">Service Area</a>
+    </nav>
 
-        
-        <label>
-          last Name
-          <input type="text" name="last_name" required />
-        </label>
+    <a class="phone-cta" href="tel:5551234567">(555) 123-4567</a>
+  </header>
 
-        <label>
-          Email Address
-          <input type="email" name="email" required />
-        </label>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="service-note">Heating, cooling, tune-ups, and emergency repair</p>
+        <h1 id="hero-title">Fast HVAC help when your home cannot wait.</h1>
+        <p class="hero-text">
+          AC repair, furnace service, and expert maintenance from local technicians who keep homes comfortable year-round.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#request">Request Service</a>
+          <span class="availability">Same-day appointments available</span>
+        </div>
+      </div>
 
-        <label>
-          Phone Number
-          <input type="tel" name="phone" required />
-        </label>
+      <div class="hero-visual" aria-label="HVAC service vehicle and request prompt">
+        <div class="house-scene">
+          <div class="sun"></div>
+          <div class="roof"></div>
+          <div class="house">
+            <span class="window"></span>
+            <span class="window"></span>
+            <span class="door"></span>
+          </div>
+          <div class="service-van">
+            <div class="van-stripe"></div>
+            <strong>SUMMIT AIR</strong>
+            <span>Heating - Cooling - Air Quality</span>
+          </div>
+          <div class="tech-card">
+            <span class="tool-icon">+</span>
+            <strong>Certified local techs</strong>
+            <small>Ready for repairs, installs, and seasonal tune-ups.</small>
+          </div>
+        </div>
 
-        <label>
-          Message
-          <textarea name="message" rows="5" required></textarea>
-        </label>
+        <aside class="request-card" id="request">
+          <h2>Start a service request</h2>
+          <p>Tell us what is going on and a comfort specialist will follow up quickly.</p>
+          <a class="request-link" href="#top">Request Service</a>
+          <small>Widget embed can be added here later.</small>
+        </aside>
+      </div>
+    </section>
 
-        <label class="checkbox">
-          <input type="checkbox" name="sms_consent" required />
-          <span>
-            By checking this box, you agree to receive SMS messages from Suraj Yerramilli related to your inquiry, including follow-ups and service-related updates.
+    <section class="trust-strip" id="reviews" aria-label="Company highlights">
+      <div>
+        <strong>4.9 stars</strong>
+        <span>700+ local reviews</span>
+      </div>
+      <div>
+        <strong>Licensed & insured</strong>
+        <span>Professional residential service</span>
+      </div>
+      <div>
+        <strong>Same-day service</strong>
+        <span>Fast help for urgent issues</span>
+      </div>
+      <div>
+        <strong>Local technicians</strong>
+        <span>Serving nearby neighborhoods</span>
+      </div>
+    </section>
 
-            Message frequency may vary. Message and data rates may apply.
+    <section class="section services-section" id="services">
+      <div class="section-heading">
+        <span>Our services</span>
+        <h2>Reliable HVAC solutions for every season</h2>
+        <p>From quick repairs to routine maintenance, Summit Air keeps homes comfortable and systems running efficiently.</p>
+      </div>
 
-            Reply STOP to opt out at any time. Reply HELP for assistance.
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="service-icon cooling">AC</span>
+          <h3>AC Repair</h3>
+          <p>Fast troubleshooting for warm air, weak airflow, frozen coils, and cooling systems that will not start.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon heating">HT</span>
+          <h3>Furnace Repair</h3>
+          <p>Heating diagnostics and repairs that restore comfort while keeping your home safe.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon tuneup">TU</span>
+          <h3>Seasonal Maintenance</h3>
+          <p>Prevent breakdowns with tune-ups that improve efficiency, airflow, and system life.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon air">IAQ</span>
+          <h3>Indoor Air Quality</h3>
+          <p>Filter, humidity, and air quality solutions for cleaner, healthier air at home.</p>
+        </article>
+      </div>
+    </section>
 
-            Consent is not a condition of purchase.
+    <section class="section process-section" aria-labelledby="process-title">
+      <div class="section-heading">
+        <span>How it works</span>
+        <h2 id="process-title">Simple intake for real service calls</h2>
+      </div>
 
-          </span>
-        </label>
+      <div class="process-grid">
+        <article>
+          <b>1</b>
+          <h3>Describe the issue</h3>
+          <p>Share the system type, symptoms, urgency, and contact details.</p>
+        </article>
+        <article>
+          <b>2</b>
+          <h3>Get routed quickly</h3>
+          <p>The service team gets the details needed to prioritize and follow up.</p>
+        </article>
+        <article>
+          <b>3</b>
+          <h3>Schedule service</h3>
+          <p>A local technician confirms the next step and gets the job moving.</p>
+        </article>
+      </div>
+    </section>
 
-        <button type="submit">Submit</button>
-      </form>
-
-      <footer>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <span>|</span>
-        <a href="terms-and-conditions.html">Terms & Conditions</a>
-      </footer>
+    <section class="service-area" id="area">
+      <div>
+        <span>Service area</span>
+        <h2>Serving homeowners across the greater metro area.</h2>
+      </div>
+      <a class="secondary-button" href="#request">Request Service</a>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Summit Air & Home Services. Demo site for service request intake.</p>
+    <nav aria-label="Legal links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+    </nav>
+  </footer>
 </body>
 </html>
