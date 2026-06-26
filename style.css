@@ -217,8 +217,8 @@ h1 {
 .comfort-panel {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 22px;
+  grid-template-columns: minmax(340px, 1fr) minmax(280px, 300px);
+  gap: 18px;
   width: 100%;
   min-height: 500px;
   padding: 28px;
@@ -274,66 +274,27 @@ h1 {
 .service-preview {
   position: relative;
   z-index: 1;
-  min-height: 340px;
+  min-height: 432px;
   border-radius: 8px;
   background:
-    linear-gradient(160deg, rgba(6, 35, 74, 0.04), rgba(21, 108, 198, 0.18)),
-    linear-gradient(180deg, #f8fbff 0%, #d7e8f7 100%);
+    linear-gradient(180deg, rgba(2, 23, 51, 0.1) 0%, rgba(2, 23, 51, 0.2) 48%, rgba(2, 23, 51, 0.58) 100%),
+    url("assets/hvac-units.png") center / cover no-repeat;
   overflow: hidden;
 }
 
 .service-preview::before {
   content: "";
   position: absolute;
-  inset: auto -10% 0;
-  height: 42%;
-  background: linear-gradient(90deg, rgba(21, 108, 198, 0.16), rgba(6, 35, 74, 0.18));
-}
-
-.home-card {
-  position: absolute;
-  right: 38px;
-  top: 62px;
-  width: 220px;
-  height: 180px;
-}
-
-.home-roof {
-  position: absolute;
-  left: 24px;
-  top: 0;
-  width: 172px;
-  height: 92px;
-  background: var(--navy);
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-
-.home-body {
-  position: absolute;
-  left: 38px;
-  top: 82px;
-  width: 150px;
-  height: 98px;
-  border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 14px 26px rgba(2, 23, 51, 0.16);
-}
-
-.home-window {
-  position: absolute;
-  left: 88px;
-  top: 112px;
-  width: 50px;
-  height: 48px;
-  border-radius: 6px;
-  background: var(--navy);
-  box-shadow: inset 0 0 0 3px #d7e7f8;
+  inset: 0;
+  background:
+    radial-gradient(circle at 78% 12%, rgba(255, 244, 199, 0.9) 0 46px, transparent 48px),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(21, 108, 198, 0.12));
 }
 
 .van-card {
   position: absolute;
   left: 28px;
-  bottom: 34px;
+  top: 36px;
   width: min(360px, calc(100% - 56px));
   padding: 28px 28px 70px;
   border-radius: 8px 34px 8px 8px;
@@ -381,6 +342,50 @@ h1 {
   font-weight: 800;
 }
 
+.system-card {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 8px;
+  background: rgba(2, 23, 51, 0.82);
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(2, 23, 51, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.system-label {
+  color: #9dd1ff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.system-card strong {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.system-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #c9def7;
+}
+
+.system-row b {
+  color: #ffffff;
+  white-space: nowrap;
+}
+
 .request-card,
 .dispatch-card,
 .service-card,
@@ -396,7 +401,7 @@ h1 {
   position: relative;
   z-index: 1;
   align-self: start;
-  padding: 28px;
+  padding: 26px;
 }
 
 .request-label {
@@ -864,24 +869,29 @@ h1 {
   }
 
   .service-preview {
-    min-height: 330px;
-  }
-
-  .home-card {
-    right: -8px;
-    top: 52px;
-    transform: scale(0.82);
-    transform-origin: top right;
+    min-height: 430px;
   }
 
   .van-card {
     left: 18px;
-    bottom: 24px;
+    top: 22px;
     width: calc(100% - 36px);
     padding: 24px 22px 64px;
   }
 
   .van-card strong {
     font-size: 30px;
+  }
+
+  .system-card {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .system-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
   }
 }
